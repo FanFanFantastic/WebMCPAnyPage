@@ -1,1 +1,3 @@
 # WebMCPAnyPage
+
+project initialization

@@ -1,0 +1,29 @@
+{
+  "name": "webmcp-any-page",
+  "version": "0.1.0",
+  "description": "Generate and integrate WebMCP tools for web pages automatically.",
+  "type": "module",
+  "bin": {
+    "wmcp": "./bin/wmcp.js"
+  },
+  "scripts": {
+    "start": "node ./bin/wmcp.js",
+    "init": "node ./bin/wmcp.js init",
+    "scan": "node ./bin/wmcp.js scan",
+    "generate": "node ./bin/wmcp.js generate",
+    "inject": "node ./bin/wmcp.js inject",
+    "skill": "node ./bin/wmcp.js skill",
+    "verify": "node ./bin/wmcp.js verify"
+  },
+  "keywords": [
+    "webmcp",
+    "mcp",
+    "agent",
+    "cli",
+    "openclaw"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}

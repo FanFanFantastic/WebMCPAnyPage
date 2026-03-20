@@ -1,0 +1,779 @@
+{
+  "page": {
+    "name": "query",
+    "path": "/Users/fanjiongming/Desktop/Projects/collaboration/VC_Pages/yip-paas-procurement/procurement-web-ui/procurement-ui/src/pages/procurement/poQuery/poList/Query.tsx",
+    "absPath": "/Users/fanjiongming/Desktop/Projects/collaboration/VC_Pages/yip-paas-procurement/procurement-web-ui/procurement-ui/src/pages/procurement/poQuery/poList/Query.tsx",
+    "url": "",
+    "searchButtonId": "",
+    "source": "adhoc"
+  },
+  "mode": "query",
+  "toolName": "query-fill-and-search",
+  "description": "Auto-generated query tool for query.",
+  "fields": [
+    {
+      "name": "asnRelationFlag",
+      "type": "enumLike",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "backStateList",
+      "type": "stringList",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "bookUrgents",
+      "type": "string",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "brandId",
+      "type": "string",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "cate3Id",
+      "type": "string",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "dcId",
+      "type": "string",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "deliveryModList",
+      "type": "stringList",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "inputCustomerOrders",
+      "type": "dateRange",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "inputPoIds",
+      "type": "stringList",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "inputRequireIds",
+      "type": "stringList",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "inputSkuIds",
+      "type": "stringList",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "inStoreTime",
+      "type": "dateRange",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "isMulReceiving",
+      "type": "string",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "isRequirements",
+      "type": "string",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "markFlag",
+      "type": "enumLike",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "needTransfer",
+      "type": "string",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "ouId",
+      "type": "string",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "outChannelList",
+      "type": "stringList",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "poBookDate",
+      "type": "dateRange",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "poCreateDate",
+      "type": "dateRange",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "poType",
+      "type": "enumLike",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "queryErpList",
+      "type": "stringList",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "queryInboundType",
+      "type": "enumLike",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "queryType",
+      "type": "enumLike",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item"
+      ]
+    },
+    {
+      "name": "sourceId",
+      "type": "string",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "stateList",
+      "type": "stringList",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "subVendorCode",
+      "type": "string",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "supplyFlag",
+      "type": "enumLike",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "todoBack",
+      "type": "dateRange",
+      "required": false,
+      "source": [
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "todoCreateAsn",
+      "type": "dateRange",
+      "required": false,
+      "source": [
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "todoMerge",
+      "type": "dateRange",
+      "required": false,
+      "source": [
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "virtualCategoryName",
+      "type": "string",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    },
+    {
+      "name": "yn",
+      "type": "string",
+      "required": false,
+      "source": [
+        "lsc-searchbox-item",
+        "Form.Item"
+      ]
+    }
+  ],
+  "searchButtonId": "po-query-search-btn",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "asnRelationFlag": {
+        "type": "string",
+        "description": "枚举/状态类字段。"
+      },
+      "backStateList": {
+        "description": "列表输入。可传逗号分隔字符串或字符串数组。",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "bookUrgents": {
+        "type": "string",
+        "description": "文本输入。"
+      },
+      "brandId": {
+        "type": "string",
+        "description": "文本输入。"
+      },
+      "cate3Id": {
+        "type": "string",
+        "description": "文本输入。"
+      },
+      "dcId": {
+        "type": "string",
+        "description": "文本输入。"
+      },
+      "deliveryModList": {
+        "description": "列表输入。可传逗号分隔字符串或字符串数组。",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "inputCustomerOrders": {
+        "description": "日期范围。支持 [start,end] / {start,end} / \"start,end\"。",
+        "anyOf": [
+          {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "string"
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "start": {
+                "type": "string"
+              },
+              "end": {
+                "type": "string"
+              },
+              "startDate": {
+                "type": "string"
+              },
+              "endDate": {
+                "type": "string"
+              },
+              "from": {
+                "type": "string"
+              },
+              "to": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "inputPoIds": {
+        "description": "列表输入。可传逗号分隔字符串或字符串数组。",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "inputRequireIds": {
+        "description": "列表输入。可传逗号分隔字符串或字符串数组。",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "inputSkuIds": {
+        "description": "列表输入。可传逗号分隔字符串或字符串数组。",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "inStoreTime": {
+        "description": "日期范围。支持 [start,end] / {start,end} / \"start,end\"。",
+        "anyOf": [
+          {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "string"
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "start": {
+                "type": "string"
+              },
+              "end": {
+                "type": "string"
+              },
+              "startDate": {
+                "type": "string"
+              },
+              "endDate": {
+                "type": "string"
+              },
+              "from": {
+                "type": "string"
+              },
+              "to": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "isMulReceiving": {
+        "type": "string",
+        "description": "文本输入。"
+      },
+      "isRequirements": {
+        "type": "string",
+        "description": "文本输入。"
+      },
+      "markFlag": {
+        "type": "string",
+        "description": "枚举/状态类字段。"
+      },
+      "needTransfer": {
+        "type": "string",
+        "description": "文本输入。"
+      },
+      "ouId": {
+        "type": "string",
+        "description": "文本输入。"
+      },
+      "outChannelList": {
+        "description": "列表输入。可传逗号分隔字符串或字符串数组。",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "poBookDate": {
+        "description": "日期范围。支持 [start,end] / {start,end} / \"start,end\"。",
+        "anyOf": [
+          {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "string"
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "start": {
+                "type": "string"
+              },
+              "end": {
+                "type": "string"
+              },
+              "startDate": {
+                "type": "string"
+              },
+              "endDate": {
+                "type": "string"
+              },
+              "from": {
+                "type": "string"
+              },
+              "to": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "poCreateDate": {
+        "description": "日期范围。支持 [start,end] / {start,end} / \"start,end\"。",
+        "anyOf": [
+          {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "string"
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "start": {
+                "type": "string"
+              },
+              "end": {
+                "type": "string"
+              },
+              "startDate": {
+                "type": "string"
+              },
+              "endDate": {
+                "type": "string"
+              },
+              "from": {
+                "type": "string"
+              },
+              "to": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "poType": {
+        "type": "string",
+        "description": "枚举/状态类字段。"
+      },
+      "queryErpList": {
+        "description": "列表输入。可传逗号分隔字符串或字符串数组。",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "queryInboundType": {
+        "type": "string",
+        "description": "枚举/状态类字段。"
+      },
+      "queryType": {
+        "type": "string",
+        "description": "枚举/状态类字段。"
+      },
+      "sourceId": {
+        "type": "string",
+        "description": "文本输入。"
+      },
+      "stateList": {
+        "description": "列表输入。可传逗号分隔字符串或字符串数组。",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "subVendorCode": {
+        "type": "string",
+        "description": "文本输入。"
+      },
+      "supplyFlag": {
+        "type": "string",
+        "description": "枚举/状态类字段。"
+      },
+      "todoBack": {
+        "description": "日期范围。支持 [start,end] / {start,end} / \"start,end\"。",
+        "anyOf": [
+          {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "string"
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "start": {
+                "type": "string"
+              },
+              "end": {
+                "type": "string"
+              },
+              "startDate": {
+                "type": "string"
+              },
+              "endDate": {
+                "type": "string"
+              },
+              "from": {
+                "type": "string"
+              },
+              "to": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "todoCreateAsn": {
+        "description": "日期范围。支持 [start,end] / {start,end} / \"start,end\"。",
+        "anyOf": [
+          {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "string"
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "start": {
+                "type": "string"
+              },
+              "end": {
+                "type": "string"
+              },
+              "startDate": {
+                "type": "string"
+              },
+              "endDate": {
+                "type": "string"
+              },
+              "from": {
+                "type": "string"
+              },
+              "to": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "todoMerge": {
+        "description": "日期范围。支持 [start,end] / {start,end} / \"start,end\"。",
+        "anyOf": [
+          {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "string"
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "start": {
+                "type": "string"
+              },
+              "end": {
+                "type": "string"
+              },
+              "startDate": {
+                "type": "string"
+              },
+              "endDate": {
+                "type": "string"
+              },
+              "from": {
+                "type": "string"
+              },
+              "to": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "virtualCategoryName": {
+        "type": "string",
+        "description": "文本输入。"
+      },
+      "yn": {
+        "type": "string",
+        "description": "文本输入。"
+      }
+    },
+    "required": [],
+    "additionalProperties": true
+  },
+  "defaultParams": {},
+  "runtime": {
+    "polyfillUrl": "https://unpkg.com/@mcp-b/webmcp-polyfill@latest/dist/index.iife.js",
+    "bridgeGlobal": "__wmcpAnyPage"
+  },
+  "generatedAt": "2026-03-20T07:10:36.664Z"
+}

@@ -99,7 +99,7 @@ const ${varName} = {
     idempotentHint: true,
     openWorldHint: false
   },
-  execute: async (params = {}) => {
+  execute: async (params: any = {}) => {
     const fieldDefs = ${fieldDefsText};
     const defaultParams = ${defaultParamsText};
     const humanTemplates = ${humanTemplatesText};
@@ -204,12 +204,16 @@ const ${varName} = {
     }
 
     if (!searchTriggered) {
-      const candidates = [...document.querySelectorAll("button,input[type=button],input[type=submit],a")]
-        .filter((el) => {
-          const text = (el.innerText || el.textContent || el.value || "").trim().toLowerCase();
-          return /search|query|查询|查詢|submit/.test(text);
-        });
-      const first = candidates[0];
+      const candidateNodes = document.querySelectorAll("button,input[type=button],input[type=submit],a");
+      const candidates = Array.from(candidateNodes).filter((el) => {
+        const htmlEl = el as HTMLElement;
+        const inputEl = el as HTMLInputElement;
+        const text = ((htmlEl.innerText || htmlEl.textContent || inputEl.value || "") + "")
+          .trim()
+          .toLowerCase();
+        return /search|query|查询|查詢|submit/.test(text);
+      });
+      const first = candidates[0] as HTMLElement | undefined;
       if (first && typeof first.click === "function") {
         first.click();
         searchTriggered = true;
@@ -219,12 +223,13 @@ const ${varName} = {
 
     const payload = {
       tool: "${spec.toolName}",
-      changedFields,
+      changedFields: changedFields,
       changedCount: changedFields.length,
-      searchTriggered,
-      searchTarget,
+      searchTriggered: searchTriggered,
+      searchTarget: searchTarget,
       page: "${spec.page.path}",
-      ts: new Date().toISOString()
+      ts: new Date().toISOString(),
+      humanReadable: ""
     };
 
     payload.humanReadable = changedFields.length
@@ -247,6 +252,7 @@ const ${varName} = {
 
 (() => {
   let timer = null;
+  const wmcpWindow = window;
 
   const register = () => {
     const modelContext = navigator.modelContext;
@@ -277,12 +283,12 @@ const ${varName} = {
 
   registerWithRetry();
 
-  window.${bridgeGlobal} = window.${bridgeGlobal} || {};
-  window.${bridgeGlobal}["${spec.toolName}"] = {
+  wmcpWindow["${bridgeGlobal}"] = wmcpWindow["${bridgeGlobal}"] || {};
+  wmcpWindow["${bridgeGlobal}"]["${spec.toolName}"] = {
     toolName: ${varName}.name,
     description: ${varName}.description,
     inputSchema: ${varName}.inputSchema,
-    register,
+    register: register,
     call: async (params = {}) => ${varName}.execute(params),
     polyfillUrl: "${config.integrate?.polyfillUrl || ""}"
   };

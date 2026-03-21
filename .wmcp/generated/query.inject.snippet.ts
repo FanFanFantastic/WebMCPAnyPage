@@ -5,11 +5,46 @@ const __wmcpTool_query = {
   inputSchema: {
   "type": "object",
   "properties": {
-    "asnRelationFlag": {
-      "type": "string",
-      "description": "枚举/状态类字段。"
+    "asnCreateDate": {
+      "description": "日期范围。支持 [start,end] / {start,end} / \"start,end\"。",
+      "anyOf": [
+        {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "start": {
+              "type": "string"
+            },
+            "end": {
+              "type": "string"
+            },
+            "startDate": {
+              "type": "string"
+            },
+            "endDate": {
+              "type": "string"
+            },
+            "from": {
+              "type": "string"
+            },
+            "to": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "type": "string"
+        }
+      ]
     },
-    "backStateList": {
+    "asnIdList": {
       "description": "列表输入。可传逗号分隔字符串或字符串数组。",
       "anyOf": [
         {
@@ -27,169 +62,11 @@ const __wmcpTool_query = {
       "type": "string",
       "description": "文本输入。"
     },
-    "brandId": {
-      "type": "string",
-      "description": "文本输入。"
-    },
-    "cate3Id": {
-      "type": "string",
-      "description": "文本输入。"
-    },
     "dcId": {
       "type": "string",
       "description": "文本输入。"
     },
-    "deliveryModList": {
-      "description": "列表输入。可传逗号分隔字符串或字符串数组。",
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      ]
-    },
-    "inputCustomerOrders": {
-      "description": "日期范围。支持 [start,end] / {start,end} / \"start,end\"。",
-      "anyOf": [
-        {
-          "type": "array",
-          "minItems": 2,
-          "maxItems": 2,
-          "items": {
-            "type": "string"
-          }
-        },
-        {
-          "type": "object",
-          "properties": {
-            "start": {
-              "type": "string"
-            },
-            "end": {
-              "type": "string"
-            },
-            "startDate": {
-              "type": "string"
-            },
-            "endDate": {
-              "type": "string"
-            },
-            "from": {
-              "type": "string"
-            },
-            "to": {
-              "type": "string"
-            }
-          }
-        },
-        {
-          "type": "string"
-        }
-      ]
-    },
-    "inputPoIds": {
-      "description": "列表输入。可传逗号分隔字符串或字符串数组。",
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      ]
-    },
-    "inputRequireIds": {
-      "description": "列表输入。可传逗号分隔字符串或字符串数组。",
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      ]
-    },
-    "inputSkuIds": {
-      "description": "列表输入。可传逗号分隔字符串或字符串数组。",
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      ]
-    },
-    "inStoreTime": {
-      "description": "日期范围。支持 [start,end] / {start,end} / \"start,end\"。",
-      "anyOf": [
-        {
-          "type": "array",
-          "minItems": 2,
-          "maxItems": 2,
-          "items": {
-            "type": "string"
-          }
-        },
-        {
-          "type": "object",
-          "properties": {
-            "start": {
-              "type": "string"
-            },
-            "end": {
-              "type": "string"
-            },
-            "startDate": {
-              "type": "string"
-            },
-            "endDate": {
-              "type": "string"
-            },
-            "from": {
-              "type": "string"
-            },
-            "to": {
-              "type": "string"
-            }
-          }
-        },
-        {
-          "type": "string"
-        }
-      ]
-    },
-    "isMulReceiving": {
-      "type": "string",
-      "description": "文本输入。"
-    },
     "isRequirements": {
-      "type": "string",
-      "description": "文本输入。"
-    },
-    "markFlag": {
-      "type": "string",
-      "description": "枚举/状态类字段。"
-    },
-    "needTransfer": {
-      "type": "string",
-      "description": "文本输入。"
-    },
-    "ouId": {
       "type": "string",
       "description": "文本输入。"
     },
@@ -207,87 +84,19 @@ const __wmcpTool_query = {
         }
       ]
     },
-    "poBookDate": {
-      "description": "日期范围。支持 [start,end] / {start,end} / \"start,end\"。",
+    "poIdList": {
+      "description": "列表输入。可传逗号分隔字符串或字符串数组。",
       "anyOf": [
         {
+          "type": "string"
+        },
+        {
           "type": "array",
-          "minItems": 2,
-          "maxItems": 2,
           "items": {
             "type": "string"
           }
-        },
-        {
-          "type": "object",
-          "properties": {
-            "start": {
-              "type": "string"
-            },
-            "end": {
-              "type": "string"
-            },
-            "startDate": {
-              "type": "string"
-            },
-            "endDate": {
-              "type": "string"
-            },
-            "from": {
-              "type": "string"
-            },
-            "to": {
-              "type": "string"
-            }
-          }
-        },
-        {
-          "type": "string"
         }
       ]
-    },
-    "poCreateDate": {
-      "description": "日期范围。支持 [start,end] / {start,end} / \"start,end\"。",
-      "anyOf": [
-        {
-          "type": "array",
-          "minItems": 2,
-          "maxItems": 2,
-          "items": {
-            "type": "string"
-          }
-        },
-        {
-          "type": "object",
-          "properties": {
-            "start": {
-              "type": "string"
-            },
-            "end": {
-              "type": "string"
-            },
-            "startDate": {
-              "type": "string"
-            },
-            "endDate": {
-              "type": "string"
-            },
-            "from": {
-              "type": "string"
-            },
-            "to": {
-              "type": "string"
-            }
-          }
-        },
-        {
-          "type": "string"
-        }
-      ]
-    },
-    "poType": {
-      "type": "string",
-      "description": "枚举/状态类字段。"
     },
     "queryErpList": {
       "description": "列表输入。可传逗号分隔字符串或字符串数组。",
@@ -303,19 +112,7 @@ const __wmcpTool_query = {
         }
       ]
     },
-    "queryInboundType": {
-      "type": "string",
-      "description": "枚举/状态类字段。"
-    },
-    "queryType": {
-      "type": "string",
-      "description": "枚举/状态类字段。"
-    },
-    "sourceId": {
-      "type": "string",
-      "description": "文本输入。"
-    },
-    "stateList": {
+    "requirementsAsnOrderIds": {
       "description": "列表输入。可传逗号分隔字符串或字符串数组。",
       "anyOf": [
         {
@@ -329,138 +126,33 @@ const __wmcpTool_query = {
         }
       ]
     },
-    "subVendorCode": {
-      "type": "string",
-      "description": "文本输入。"
-    },
-    "supplyFlag": {
-      "type": "string",
-      "description": "枚举/状态类字段。"
-    },
-    "todoBack": {
-      "description": "日期范围。支持 [start,end] / {start,end} / \"start,end\"。",
+    "requirementsOrderIds": {
+      "description": "列表输入。可传逗号分隔字符串或字符串数组。",
       "anyOf": [
         {
+          "type": "string"
+        },
+        {
           "type": "array",
-          "minItems": 2,
-          "maxItems": 2,
           "items": {
             "type": "string"
           }
-        },
-        {
-          "type": "object",
-          "properties": {
-            "start": {
-              "type": "string"
-            },
-            "end": {
-              "type": "string"
-            },
-            "startDate": {
-              "type": "string"
-            },
-            "endDate": {
-              "type": "string"
-            },
-            "from": {
-              "type": "string"
-            },
-            "to": {
-              "type": "string"
-            }
-          }
-        },
-        {
-          "type": "string"
         }
       ]
     },
-    "todoCreateAsn": {
-      "description": "日期范围。支持 [start,end] / {start,end} / \"start,end\"。",
+    "skuIdList": {
+      "description": "列表输入。可传逗号分隔字符串或字符串数组。",
       "anyOf": [
         {
+          "type": "string"
+        },
+        {
           "type": "array",
-          "minItems": 2,
-          "maxItems": 2,
           "items": {
             "type": "string"
           }
-        },
-        {
-          "type": "object",
-          "properties": {
-            "start": {
-              "type": "string"
-            },
-            "end": {
-              "type": "string"
-            },
-            "startDate": {
-              "type": "string"
-            },
-            "endDate": {
-              "type": "string"
-            },
-            "from": {
-              "type": "string"
-            },
-            "to": {
-              "type": "string"
-            }
-          }
-        },
-        {
-          "type": "string"
         }
       ]
-    },
-    "todoMerge": {
-      "description": "日期范围。支持 [start,end] / {start,end} / \"start,end\"。",
-      "anyOf": [
-        {
-          "type": "array",
-          "minItems": 2,
-          "maxItems": 2,
-          "items": {
-            "type": "string"
-          }
-        },
-        {
-          "type": "object",
-          "properties": {
-            "start": {
-              "type": "string"
-            },
-            "end": {
-              "type": "string"
-            },
-            "startDate": {
-              "type": "string"
-            },
-            "endDate": {
-              "type": "string"
-            },
-            "from": {
-              "type": "string"
-            },
-            "to": {
-              "type": "string"
-            }
-          }
-        },
-        {
-          "type": "string"
-        }
-      ]
-    },
-    "virtualCategoryName": {
-      "type": "string",
-      "description": "文本输入。"
-    },
-    "yn": {
-      "type": "string",
-      "description": "文本输入。"
     }
   },
   "required": [],
@@ -471,23 +163,21 @@ const __wmcpTool_query = {
     idempotentHint: true,
     openWorldHint: false
   },
-  execute: async (params = {}) => {
+  execute: async (params: any = {}) => {
     const fieldDefs = [
   {
-    "name": "asnRelationFlag",
-    "type": "enumLike",
+    "name": "asnCreateDate",
+    "type": "dateRange",
     "required": false,
     "source": [
-      "lsc-searchbox-item",
       "Form.Item"
     ]
   },
   {
-    "name": "backStateList",
+    "name": "asnIdList",
     "type": "stringList",
     "required": false,
     "source": [
-      "lsc-searchbox-item",
       "Form.Item"
     ]
   },
@@ -496,25 +186,6 @@ const __wmcpTool_query = {
     "type": "string",
     "required": false,
     "source": [
-      "lsc-searchbox-item",
-      "Form.Item"
-    ]
-  },
-  {
-    "name": "brandId",
-    "type": "string",
-    "required": false,
-    "source": [
-      "lsc-searchbox-item",
-      "Form.Item"
-    ]
-  },
-  {
-    "name": "cate3Id",
-    "type": "string",
-    "required": false,
-    "source": [
-      "lsc-searchbox-item",
       "Form.Item"
     ]
   },
@@ -523,70 +194,6 @@ const __wmcpTool_query = {
     "type": "string",
     "required": false,
     "source": [
-      "lsc-searchbox-item",
-      "Form.Item"
-    ]
-  },
-  {
-    "name": "deliveryModList",
-    "type": "stringList",
-    "required": false,
-    "source": [
-      "lsc-searchbox-item",
-      "Form.Item"
-    ]
-  },
-  {
-    "name": "inputCustomerOrders",
-    "type": "dateRange",
-    "required": false,
-    "source": [
-      "lsc-searchbox-item",
-      "Form.Item"
-    ]
-  },
-  {
-    "name": "inputPoIds",
-    "type": "stringList",
-    "required": false,
-    "source": [
-      "lsc-searchbox-item",
-      "Form.Item"
-    ]
-  },
-  {
-    "name": "inputRequireIds",
-    "type": "stringList",
-    "required": false,
-    "source": [
-      "lsc-searchbox-item",
-      "Form.Item"
-    ]
-  },
-  {
-    "name": "inputSkuIds",
-    "type": "stringList",
-    "required": false,
-    "source": [
-      "lsc-searchbox-item",
-      "Form.Item"
-    ]
-  },
-  {
-    "name": "inStoreTime",
-    "type": "dateRange",
-    "required": false,
-    "source": [
-      "lsc-searchbox-item",
-      "Form.Item"
-    ]
-  },
-  {
-    "name": "isMulReceiving",
-    "type": "string",
-    "required": false,
-    "source": [
-      "lsc-searchbox-item",
       "Form.Item"
     ]
   },
@@ -595,34 +202,6 @@ const __wmcpTool_query = {
     "type": "string",
     "required": false,
     "source": [
-      "lsc-searchbox-item",
-      "Form.Item"
-    ]
-  },
-  {
-    "name": "markFlag",
-    "type": "enumLike",
-    "required": false,
-    "source": [
-      "lsc-searchbox-item",
-      "Form.Item"
-    ]
-  },
-  {
-    "name": "needTransfer",
-    "type": "string",
-    "required": false,
-    "source": [
-      "lsc-searchbox-item",
-      "Form.Item"
-    ]
-  },
-  {
-    "name": "ouId",
-    "type": "string",
-    "required": false,
-    "source": [
-      "lsc-searchbox-item",
       "Form.Item"
     ]
   },
@@ -631,34 +210,14 @@ const __wmcpTool_query = {
     "type": "stringList",
     "required": false,
     "source": [
-      "lsc-searchbox-item",
       "Form.Item"
     ]
   },
   {
-    "name": "poBookDate",
-    "type": "dateRange",
+    "name": "poIdList",
+    "type": "stringList",
     "required": false,
     "source": [
-      "lsc-searchbox-item",
-      "Form.Item"
-    ]
-  },
-  {
-    "name": "poCreateDate",
-    "type": "dateRange",
-    "required": false,
-    "source": [
-      "lsc-searchbox-item",
-      "Form.Item"
-    ]
-  },
-  {
-    "name": "poType",
-    "type": "enumLike",
-    "required": false,
-    "source": [
-      "lsc-searchbox-item",
       "Form.Item"
     ]
   },
@@ -667,102 +226,30 @@ const __wmcpTool_query = {
     "type": "stringList",
     "required": false,
     "source": [
-      "lsc-searchbox-item",
       "Form.Item"
     ]
   },
   {
-    "name": "queryInboundType",
-    "type": "enumLike",
-    "required": false,
-    "source": [
-      "lsc-searchbox-item",
-      "Form.Item"
-    ]
-  },
-  {
-    "name": "queryType",
-    "type": "enumLike",
-    "required": false,
-    "source": [
-      "lsc-searchbox-item"
-    ]
-  },
-  {
-    "name": "sourceId",
-    "type": "string",
-    "required": false,
-    "source": [
-      "lsc-searchbox-item",
-      "Form.Item"
-    ]
-  },
-  {
-    "name": "stateList",
+    "name": "requirementsAsnOrderIds",
     "type": "stringList",
     "required": false,
     "source": [
-      "lsc-searchbox-item",
       "Form.Item"
     ]
   },
   {
-    "name": "subVendorCode",
-    "type": "string",
-    "required": false,
-    "source": [
-      "lsc-searchbox-item",
-      "Form.Item"
-    ]
-  },
-  {
-    "name": "supplyFlag",
-    "type": "enumLike",
-    "required": false,
-    "source": [
-      "lsc-searchbox-item",
-      "Form.Item"
-    ]
-  },
-  {
-    "name": "todoBack",
-    "type": "dateRange",
+    "name": "requirementsOrderIds",
+    "type": "stringList",
     "required": false,
     "source": [
       "Form.Item"
     ]
   },
   {
-    "name": "todoCreateAsn",
-    "type": "dateRange",
+    "name": "skuIdList",
+    "type": "stringList",
     "required": false,
     "source": [
-      "Form.Item"
-    ]
-  },
-  {
-    "name": "todoMerge",
-    "type": "dateRange",
-    "required": false,
-    "source": [
-      "Form.Item"
-    ]
-  },
-  {
-    "name": "virtualCategoryName",
-    "type": "string",
-    "required": false,
-    "source": [
-      "lsc-searchbox-item",
-      "Form.Item"
-    ]
-  },
-  {
-    "name": "yn",
-    "type": "string",
-    "required": false,
-    "source": [
-      "lsc-searchbox-item",
       "Form.Item"
     ]
   }
@@ -863,9 +350,9 @@ const __wmcpTool_query = {
     }
 
     let searchTriggered = false;
-    let searchTarget = "po-query-search-btn";
-    if ("po-query-search-btn") {
-      const byId = document.getElementById("po-query-search-btn");
+    let searchTarget = "";
+    if ("") {
+      const byId = document.getElementById("");
       if (byId && typeof byId.click === "function") {
         byId.click();
         searchTriggered = true;
@@ -873,12 +360,16 @@ const __wmcpTool_query = {
     }
 
     if (!searchTriggered) {
-      const candidates = [...document.querySelectorAll("button,input[type=button],input[type=submit],a")]
-        .filter((el) => {
-          const text = (el.innerText || el.textContent || el.value || "").trim().toLowerCase();
-          return /search|query|查询|查詢|submit/.test(text);
-        });
-      const first = candidates[0];
+      const candidateNodes = document.querySelectorAll("button,input[type=button],input[type=submit],a");
+      const candidates = Array.from(candidateNodes).filter((el) => {
+        const htmlEl = el as HTMLElement;
+        const inputEl = el as HTMLInputElement;
+        const text = ((htmlEl.innerText || htmlEl.textContent || inputEl.value || "") + "")
+          .trim()
+          .toLowerCase();
+        return /search|query|查询|查詢|submit/.test(text);
+      });
+      const first = candidates[0] as HTMLElement | undefined;
       if (first && typeof first.click === "function") {
         first.click();
         searchTriggered = true;
@@ -888,12 +379,13 @@ const __wmcpTool_query = {
 
     const payload = {
       tool: "query-fill-and-search",
-      changedFields,
+      changedFields: changedFields,
       changedCount: changedFields.length,
-      searchTriggered,
-      searchTarget,
-      page: "/Users/fanjiongming/Desktop/Projects/collaboration/VC_Pages/yip-paas-procurement/procurement-web-ui/procurement-ui/src/pages/procurement/poQuery/poList/Query.tsx",
-      ts: new Date().toISOString()
+      searchTriggered: searchTriggered,
+      searchTarget: searchTarget,
+      page: "/Users/fanjiongming/Desktop/Projects/collaboration/VC_Pages/yip-paas-procurement/procurement-web-ui/procurement-ui/src/pages/procurement/asnQuery/Query.tsx",
+      ts: new Date().toISOString(),
+      humanReadable: ""
     };
 
     payload.humanReadable = changedFields.length
@@ -916,6 +408,7 @@ const __wmcpTool_query = {
 
 (() => {
   let timer = null;
+  const wmcpWindow = window;
 
   const register = () => {
     const modelContext = navigator.modelContext;
@@ -946,12 +439,12 @@ const __wmcpTool_query = {
 
   registerWithRetry();
 
-  window.__wmcpAnyPage = window.__wmcpAnyPage || {};
-  window.__wmcpAnyPage["query-fill-and-search"] = {
+  wmcpWindow["__wmcpAnyPage"] = wmcpWindow["__wmcpAnyPage"] || {};
+  wmcpWindow["__wmcpAnyPage"]["query-fill-and-search"] = {
     toolName: __wmcpTool_query.name,
     description: __wmcpTool_query.description,
     inputSchema: __wmcpTool_query.inputSchema,
-    register,
+    register: register,
     call: async (params = {}) => __wmcpTool_query.execute(params),
     polyfillUrl: "https://unpkg.com/@mcp-b/webmcp-polyfill@latest/dist/index.iife.js"
   };

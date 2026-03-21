@@ -1,8 +1,8 @@
 {
   "page": {
     "name": "query",
-    "path": "/Users/fanjiongming/Desktop/Projects/collaboration/VC_Pages/yip-paas-procurement/procurement-web-ui/procurement-ui/src/pages/procurement/poQuery/poList/Query.tsx",
-    "absPath": "/Users/fanjiongming/Desktop/Projects/collaboration/VC_Pages/yip-paas-procurement/procurement-web-ui/procurement-ui/src/pages/procurement/poQuery/poList/Query.tsx",
+    "path": "/Users/fanjiongming/Desktop/Projects/collaboration/VC_Pages/yip-paas-procurement/procurement-web-ui/procurement-ui/src/pages/procurement/asnQuery/Query.tsx",
+    "absPath": "/Users/fanjiongming/Desktop/Projects/collaboration/VC_Pages/yip-paas-procurement/procurement-web-ui/procurement-ui/src/pages/procurement/asnQuery/Query.tsx",
     "url": "",
     "searchButtonId": "",
     "source": "adhoc"
@@ -10,20 +10,18 @@
   "capabilities": {
     "fields": [
       {
-        "name": "asnRelationFlag",
-        "type": "enumLike",
+        "name": "asnCreateDate",
+        "type": "dateRange",
         "required": false,
         "source": [
-          "lsc-searchbox-item",
           "Form.Item"
         ]
       },
       {
-        "name": "backStateList",
+        "name": "asnIdList",
         "type": "stringList",
         "required": false,
         "source": [
-          "lsc-searchbox-item",
           "Form.Item"
         ]
       },
@@ -32,25 +30,6 @@
         "type": "string",
         "required": false,
         "source": [
-          "lsc-searchbox-item",
-          "Form.Item"
-        ]
-      },
-      {
-        "name": "brandId",
-        "type": "string",
-        "required": false,
-        "source": [
-          "lsc-searchbox-item",
-          "Form.Item"
-        ]
-      },
-      {
-        "name": "cate3Id",
-        "type": "string",
-        "required": false,
-        "source": [
-          "lsc-searchbox-item",
           "Form.Item"
         ]
       },
@@ -59,70 +38,6 @@
         "type": "string",
         "required": false,
         "source": [
-          "lsc-searchbox-item",
-          "Form.Item"
-        ]
-      },
-      {
-        "name": "deliveryModList",
-        "type": "stringList",
-        "required": false,
-        "source": [
-          "lsc-searchbox-item",
-          "Form.Item"
-        ]
-      },
-      {
-        "name": "inputCustomerOrders",
-        "type": "dateRange",
-        "required": false,
-        "source": [
-          "lsc-searchbox-item",
-          "Form.Item"
-        ]
-      },
-      {
-        "name": "inputPoIds",
-        "type": "stringList",
-        "required": false,
-        "source": [
-          "lsc-searchbox-item",
-          "Form.Item"
-        ]
-      },
-      {
-        "name": "inputRequireIds",
-        "type": "stringList",
-        "required": false,
-        "source": [
-          "lsc-searchbox-item",
-          "Form.Item"
-        ]
-      },
-      {
-        "name": "inputSkuIds",
-        "type": "stringList",
-        "required": false,
-        "source": [
-          "lsc-searchbox-item",
-          "Form.Item"
-        ]
-      },
-      {
-        "name": "inStoreTime",
-        "type": "dateRange",
-        "required": false,
-        "source": [
-          "lsc-searchbox-item",
-          "Form.Item"
-        ]
-      },
-      {
-        "name": "isMulReceiving",
-        "type": "string",
-        "required": false,
-        "source": [
-          "lsc-searchbox-item",
           "Form.Item"
         ]
       },
@@ -131,34 +46,6 @@
         "type": "string",
         "required": false,
         "source": [
-          "lsc-searchbox-item",
-          "Form.Item"
-        ]
-      },
-      {
-        "name": "markFlag",
-        "type": "enumLike",
-        "required": false,
-        "source": [
-          "lsc-searchbox-item",
-          "Form.Item"
-        ]
-      },
-      {
-        "name": "needTransfer",
-        "type": "string",
-        "required": false,
-        "source": [
-          "lsc-searchbox-item",
-          "Form.Item"
-        ]
-      },
-      {
-        "name": "ouId",
-        "type": "string",
-        "required": false,
-        "source": [
-          "lsc-searchbox-item",
           "Form.Item"
         ]
       },
@@ -167,34 +54,14 @@
         "type": "stringList",
         "required": false,
         "source": [
-          "lsc-searchbox-item",
           "Form.Item"
         ]
       },
       {
-        "name": "poBookDate",
-        "type": "dateRange",
+        "name": "poIdList",
+        "type": "stringList",
         "required": false,
         "source": [
-          "lsc-searchbox-item",
-          "Form.Item"
-        ]
-      },
-      {
-        "name": "poCreateDate",
-        "type": "dateRange",
-        "required": false,
-        "source": [
-          "lsc-searchbox-item",
-          "Form.Item"
-        ]
-      },
-      {
-        "name": "poType",
-        "type": "enumLike",
-        "required": false,
-        "source": [
-          "lsc-searchbox-item",
           "Form.Item"
         ]
       },
@@ -203,126 +70,47 @@
         "type": "stringList",
         "required": false,
         "source": [
-          "lsc-searchbox-item",
           "Form.Item"
         ]
       },
       {
-        "name": "queryInboundType",
-        "type": "enumLike",
-        "required": false,
-        "source": [
-          "lsc-searchbox-item",
-          "Form.Item"
-        ]
-      },
-      {
-        "name": "queryType",
-        "type": "enumLike",
-        "required": false,
-        "source": [
-          "lsc-searchbox-item"
-        ]
-      },
-      {
-        "name": "sourceId",
-        "type": "string",
-        "required": false,
-        "source": [
-          "lsc-searchbox-item",
-          "Form.Item"
-        ]
-      },
-      {
-        "name": "stateList",
+        "name": "requirementsAsnOrderIds",
         "type": "stringList",
         "required": false,
         "source": [
-          "lsc-searchbox-item",
           "Form.Item"
         ]
       },
       {
-        "name": "subVendorCode",
-        "type": "string",
-        "required": false,
-        "source": [
-          "lsc-searchbox-item",
-          "Form.Item"
-        ]
-      },
-      {
-        "name": "supplyFlag",
-        "type": "enumLike",
-        "required": false,
-        "source": [
-          "lsc-searchbox-item",
-          "Form.Item"
-        ]
-      },
-      {
-        "name": "todoBack",
-        "type": "dateRange",
+        "name": "requirementsOrderIds",
+        "type": "stringList",
         "required": false,
         "source": [
           "Form.Item"
         ]
       },
       {
-        "name": "todoCreateAsn",
-        "type": "dateRange",
+        "name": "skuIdList",
+        "type": "stringList",
         "required": false,
         "source": [
-          "Form.Item"
-        ]
-      },
-      {
-        "name": "todoMerge",
-        "type": "dateRange",
-        "required": false,
-        "source": [
-          "Form.Item"
-        ]
-      },
-      {
-        "name": "virtualCategoryName",
-        "type": "string",
-        "required": false,
-        "source": [
-          "lsc-searchbox-item",
-          "Form.Item"
-        ]
-      },
-      {
-        "name": "yn",
-        "type": "string",
-        "required": false,
-        "source": [
-          "lsc-searchbox-item",
           "Form.Item"
         ]
       }
     ],
-    "searchButtonIds": [
-      "po-query-search-btn",
-      "lsc-searchbox"
-    ],
+    "searchButtonIds": [],
     "searchHandlers": [
       "search",
-      "getSearchData",
-      "executePoQueryWebMcpTool",
-      "resetSearchFields"
+      "getSearchData"
     ],
     "requestHints": [
       "getSearchData",
       "search",
-      "queryPurchaseOrderList",
-      "executePoQueryWebMcpTool",
-      "resetSearchFields",
+      "queryAsnOrderList",
       "querySelector",
       "querySelectorAll"
     ]
   },
   "existingToolNames": [],
-  "generatedAt": "2026-03-20T07:10:36.664Z"
+  "generatedAt": "2026-03-20T10:40:37.363Z"
 }
